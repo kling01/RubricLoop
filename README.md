@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://kling01.github.io/agenteval/demo.html">Live demo</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="docs/usage.md">Usage</a> ·
   <a href="docs/roadmap.md">Roadmap</a> ·
@@ -37,7 +38,7 @@ The offline demo uses three small, hand-authored traces and executes real code r
   <img src="docs/assets/demo.png" width="100%" alt="Actual AgentEval offline report: three authored traces, nine checks, six passes, two failures, and one non-applicable result." />
 </p>
 
-*Actual output from `agenteval demo`: 3 traces, 9 checks, 6 pass, 2 fail, and 1 not applicable. [View the saved HTML source](docs/demo.html), or run the command below to open a local report.*
+*Actual output from `agenteval demo`: 3 traces, 9 checks, 6 pass, 2 fail, and 1 not applicable. [View the saved HTML source](https://kling01.github.io/agenteval/demo.html), or run the command below to open a local report.*
 
 ## Quick start
 

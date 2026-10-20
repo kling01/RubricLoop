@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://kling01.github.io/agenteval/demo.html">在线演示</a> ·
   <a href="#快速开始">快速开始</a> ·
   <a href="docs/usage.md">使用文档</a> ·
   <a href="docs/roadmap.md">开发路线</a> ·
@@ -37,7 +38,7 @@
   <img src="docs/assets/demo.png" width="100%" alt="AgentEval 真实离线报告：3 条人工编写的示例轨迹，9 项检查，6 项通过、2 项不通过、1 项不适用。" />
 </p>
 
-*上图来自 `agenteval demo` 的实际运行：3 条轨迹、9 项检查、6 项通过、2 项不通过、1 项不适用。[查看保存的 HTML 源码](docs/demo.html)，或运行下方命令在本地打开报告。*
+*上图来自 `agenteval demo` 的实际运行：3 条轨迹、9 项检查、6 项通过、2 项不通过、1 项不适用。[查看保存的 HTML 源码](https://kling01.github.io/agenteval/demo.html)，或运行下方命令在本地打开报告。*
 
 ## 快速开始
 
