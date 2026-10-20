@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/hero.svg" width="100%" alt="RubricLoop — Trace → 可执行 Rubric → 证据与复核" />
+  <img src="docs/assets/rubricloop-hero-v1.svg" width="100%" alt="RubricLoop — Trace → 可执行 Rubric → 证据与复核" />
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ RubricLoop 是**「人在回路」**旗下的开源评测项目。我们从数�
 离线演示包含三条人工编写的小型示例轨迹，并实际执行代码规则。它用于检查安装和体验流程，不代表评估器准确率或 benchmark 成绩。
 
 <p align="center">
-  <img src="docs/assets/demo.png" width="100%" alt="RubricLoop 真实离线报告：3 条人工编写的示例轨迹，9 项检查，6 项通过、2 项不通过、1 项不适用。" />
+  <img src="docs/assets/rubricloop-demo-v1.png" width="100%" alt="RubricLoop 真实离线报告：3 条人工编写的示例轨迹，9 项检查，6 项通过、2 项不通过、1 项不适用。" />
 </p>
 
 *上图来自 `rubricloop demo` 的实际运行：3 条轨迹、9 项检查、6 项通过、2 项不通过、1 项不适用。[打开在线报告](https://kling01.github.io/RubricLoop/demo.html)，或运行下方命令在本地打开报告。*

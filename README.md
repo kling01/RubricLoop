@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/hero.svg" width="100%" alt="RubricLoop — Trace → Executable rubric → Evidence & review" />
+  <img src="docs/assets/rubricloop-hero-v1.svg" width="100%" alt="RubricLoop — Trace → Executable rubric → Evidence & review" />
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ RubricLoop is an open-source evaluation project from **人在回路**. The start
 The offline demo uses three small, hand-authored traces and executes real code rules. It is an installation and workflow example; it does not measure judge accuracy or performance on a benchmark.
 
 <p align="center">
-  <img src="docs/assets/demo.png" width="100%" alt="Actual RubricLoop offline report: three authored traces, nine checks, six passes, two failures, and one non-applicable result." />
+  <img src="docs/assets/rubricloop-demo-v1.png" width="100%" alt="Actual RubricLoop offline report: three authored traces, nine checks, six passes, two failures, and one non-applicable result." />
 </p>
 
 *Actual output from `rubricloop demo`: 3 traces, 9 checks, 6 pass, 2 fail, and 1 not applicable. [Open the live report](https://kling01.github.io/RubricLoop/demo.html), or run the command below to open a local report.*
