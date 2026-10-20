@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AgentEval · Evaluation report</title><style>
+:root{color-scheme:light;--ink:#17233a;--muted:#64748b;--line:#e2e8f0}*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.hero{background:#101b31;color:#fff;padding:38px max(24px,calc((100vw - 1120px)/2)) 34px}.brand{font-size:17px;font-weight:750;letter-spacing:.02em}.brand span{color:#90b3ff}.eyebrow{margin-top:30px;font-size:11px;letter-spacing:.18em;color:#9ab4df;font-weight:700}h1{font-size:36px;line-height:1.15;letter-spacing:-1px;margin:12px 0}.subtitle{color:#bdcbe1;max-width:650px;margin-bottom:0}main{max-width:1168px;margin:26px auto;padding:0 24px}.overview{display:flex;align-items:center;justify-content:space-between;gap:12px}.overview p{color:var(--muted);font-size:13px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0}.metric{background:#fff;border:1px solid var(--line);border-top:3px solid #8494aa;border-radius:10px;padding:16px 20px}.metric span{font-size:11px;letter-spacing:.1em;font-weight:750}.metric strong{display:block;font-size:34px;line-height:1.4}.metric small{color:var(--muted)}.metric.pass{border-top-color:#169d80}.metric.fail{border-top-color:#e27357}.metric.not_applicable{border-top-color:#7b8ba5}.metric.error{border-top-color:#c49326}.note{padding:13px 17px;border:1px solid #d8e3f5;background:#eaf0fa;border-radius:8px;font-size:13px;margin:18px 0 24px}.trace{background:#fff;border:1px solid var(--line);border-radius:11px;margin:16px 0;overflow:hidden}.trace header{padding:18px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}.index{font-size:12px;color:#8d9ab0}h2{font-size:16px;margin:0;overflow-wrap:anywhere}.count{margin-left:auto;white-space:nowrap;color:var(--muted);font-size:12px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;text-align:left;min-width:620px}th{padding:10px 20px;background:#fafbfd;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}td{padding:14px 20px;border-top:1px solid #eff2f7;font-size:13px;vertical-align:top;white-space:pre-wrap;overflow-wrap:anywhere}td:first-child{width:110px}td:nth-child(2){width:220px}td small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.pill{display:inline-block;padding:3px 8px;font-size:10px;font-weight:800;border-radius:5px;letter-spacing:.06em}.pill.pass{background:#e0f4ed;color:#08795c}.pill.fail{background:#fdeae4;color:#b5482b}.pill.not_applicable{background:#edf1f7;color:#65738a}.pill.error{background:#fff2d4;color:#956407}details{border-top:1px solid var(--line);padding:13px 20px;font-size:13px}summary{cursor:pointer;color:#46638e;font-weight:600}.message{display:flex;gap:18px;padding:12px 0;border-top:1px solid #eff2f7}.message:first-of-type{margin-top:14px}.message b{min-width:65px;color:var(--muted);font-size:11px;text-transform:uppercase}.message p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}pre{max-height:360px;overflow:auto;padding:16px;background:#f3f6fb;font-size:11px}.footer{color:var(--muted);font-size:12px;margin:28px 0 42px}.hash{font-family:monospace;font-size:10px;overflow-wrap:anywhere}@media(max-width:650px){.metrics{grid-template-columns:repeat(2,1fr)}h1{font-size:29px}.hero{padding:25px}.overview{align-items:flex-start;flex-direction:column}}
+</style></head><body><div class="hero"><div class="brand">Agent<span>Eval</span> <span style="font-size:10px;margin-left:12px;letter-spacing:.14em">TRACE → EVIDENCE</span></div><div class="eyebrow">EVALUATION REPORT / ALPHA</div><h1>Every judgment, open to inspection.</h1><p class="subtitle">Executable checks. Explicit outcomes. Original traces, one click away.</p></div><main>
+<div class="overview"><b>3 traces · 9 checks</b><p>2026-10-20T07:42:09 UTC</p></div><div class="metrics"><div class="metric pass"><span>PASS</span><strong>6</strong><small>individual checks</small></div><div class="metric fail"><span>FAIL</span><strong>2</strong><small>individual checks</small></div><div class="metric not_applicable"><span>N/A</span><strong>1</strong><small>individual checks</small></div><div class="metric error"><span>ERROR</span><strong>0</strong><small>individual checks</small></div></div>
+<div class="note">Illustrative, hand-authored traces. Code rules executed locally. No model was called.<br>N/A means the rule does not apply. Errors are unresolved evaluations. Neither counts as PASS.</div>
+<section class="trace"><header><span class="index">01</span><h2>demo-supported-lookup</h2><span class="count">3 checks</span></header><div class="scroll"><table><thead><tr><th>Outcome</th><th>Evaluator</th><th>Evidence / reason</th></tr></thead><tbody><tr><td><span class="pill pass">PASS</span></td><td><b>response-present</b><small>code</small></td><td>The agent must return a non-empty final response. | check evaluated to False: not has_final_output</td></tr><tr><td><span class="pill pass">PASS</span></td><td><b>concise-response</b><small>code</small></td><td>The final response must contain at most 160 characters. | check evaluated to False: len(final_content) &gt; 160</td></tr><tr><td><span class="pill pass">PASS</span></td><td><b>lookup-identifier</b><small>code</small></td><td>When lookup is called, each call must provide an identifier. | check evaluated to False: any(not call[&#x27;input&#x27;].get(&#x27;identifier&#x27;) for call in lookup_calls)</td></tr></tbody></table></div><details><summary>Inspect conversation &amp; trace</summary><div class="message"><b>human</b><p>What is the status of order A-104?</p></div><div class="message"><b>ai</b><p>Order A-104 has shipped. The lookup result confirms the status.</p></div><details><summary>Full normalized JSON</summary><pre>{
+  &quot;id&quot;: &quot;demo-supported-lookup&quot;,
+  &quot;root&quot;: {
+    &quot;name&quot;: &quot;LangGraph&quot;,
+    &quot;type&quot;: &quot;CHAIN&quot;,
+    &quot;input&quot;: {
+      &quot;messages&quot;: [
+        {
+          &quot;type&quot;: &quot;human&quot;,
+          &quot;content&quot;: &quot;What is the status of order A-104?&quot;
+        }
+      ]
+    },
+    &quot;output&quot;: {
+      &quot;messages&quot;: [
+        {
+          &quot;type&quot;: &quot;ai&quot;,
+          &quot;content&quot;: &quot;Order A-104 has shipped. The lookup result confirms the status.&quot;
+        }
+      ]
+    },
+    &quot;steps&quot;: [
+      {
+        &quot;type&quot;: &quot;TOOL&quot;,
+        &quot;name&quot;: &quot;lookup&quot;,
+        &quot;input&quot;: {
+          &quot;identifier&quot;: &quot;A-104&quot;
+        },
+        &quot;output&quot;: {
+          &quot;status&quot;: &quot;shipped&quot;
+        },
+        &quot;steps&quot;: []
+      }
+    ]
+  }
+}</pre></details></details></section><section class="trace"><header><span class="index">02</span><h2>demo-missing-final-answer</h2><span class="count">3 checks</span></header><div class="scroll"><table><thead><tr><th>Outcome</th><th>Evaluator</th><th>Evidence / reason</th></tr></thead><tbody><tr><td><span class="pill fail">FAIL</span></td><td><b>response-present</b><small>code</small></td><td>The agent must return a non-empty final response. | check evaluated to True: not has_final_output</td></tr><tr><td><span class="pill pass">PASS</span></td><td><b>concise-response</b><small>code</small></td><td>The final response must contain at most 160 characters. | check evaluated to False: len(final_content) &gt; 160</td></tr><tr><td><span class="pill not_applicable">N/A</span></td><td><b>lookup-identifier</b><small>code</small></td><td>Scope tool:lookup was not activated.</td></tr></tbody></table></div><details><summary>Inspect conversation &amp; trace</summary><div class="message"><b>human</b><p>Please summarize the result.</p></div><div class="message"><b>ai</b><p><em>Empty message</em></p></div><details><summary>Full normalized JSON</summary><pre>{
+  &quot;id&quot;: &quot;demo-missing-final-answer&quot;,
+  &quot;root&quot;: {
+    &quot;id&quot;: &quot;conversation&quot;,
+    &quot;parentObservationId&quot;: null,
+    &quot;name&quot;: &quot;LangGraph&quot;,
+    &quot;type&quot;: &quot;CHAIN&quot;,
+    &quot;input&quot;: {
+      &quot;messages&quot;: []
+    },
+    &quot;output&quot;: {
+      &quot;messages&quot;: [
+        {
+          &quot;content&quot;: &quot;Please summarize the result.&quot;,
+          &quot;type&quot;: &quot;human&quot;
+        },
+        {
+          &quot;content&quot;: &quot;&quot;,
+          &quot;type&quot;: &quot;ai&quot;
+        }
+      ]
+    },
+    &quot;steps&quot;: []
+  }
+}</pre></details></details></section><section class="trace"><header><span class="index">03</span><h2>demo-lookup-without-id</h2><span class="count">3 checks</span></header><div class="scroll"><table><thead><tr><th>Outcome</th><th>Evaluator</th><th>Evidence / reason</th></tr></thead><tbody><tr><td><span class="pill pass">PASS</span></td><td><b>response-present</b><small>code</small></td><td>The agent must return a non-empty final response. | check evaluated to False: not has_final_output</td></tr><tr><td><span class="pill pass">PASS</span></td><td><b>concise-response</b><small>code</small></td><td>The final response must contain at most 160 characters. | check evaluated to False: len(final_content) &gt; 160</td></tr><tr><td><span class="pill fail">FAIL</span></td><td><b>lookup-identifier</b><small>code</small></td><td>When lookup is called, each call must provide an identifier. | check evaluated to True: any(not call[&#x27;input&#x27;].get(&#x27;identifier&#x27;) for call in lookup_calls)</td></tr></tbody></table></div><details><summary>Inspect conversation &amp; trace</summary><div class="message"><b>human</b><p>Check my order status.</p></div><div class="message"><b>ai</b><p>Please provide your order identifier so I can check its status.</p></div><details><summary>Full normalized JSON</summary><pre>{
+  &quot;id&quot;: &quot;demo-lookup-without-id&quot;,
+  &quot;root&quot;: {
+    &quot;name&quot;: &quot;LangGraph&quot;,
+    &quot;type&quot;: &quot;CHAIN&quot;,
+    &quot;input&quot;: {
+      &quot;messages&quot;: [
+        {
+          &quot;type&quot;: &quot;human&quot;,
+          &quot;content&quot;: &quot;Check my order status.&quot;
+        }
+      ]
+    },
+    &quot;output&quot;: {
+      &quot;messages&quot;: [
+        {
+          &quot;type&quot;: &quot;ai&quot;,
+          &quot;content&quot;: &quot;Please provide your order identifier so I can check its status.&quot;
+        }
+      ]
+    },
+    &quot;steps&quot;: [
+      {
+        &quot;type&quot;: &quot;TOOL&quot;,
+        &quot;name&quot;: &quot;lookup&quot;,
+        &quot;input&quot;: {},
+        &quot;output&quot;: {
+          &quot;error&quot;: &quot;missing identifier&quot;
+        },
+        &quot;steps&quot;: []
+      }
+    ]
+  }
+}</pre></details></details></section><div class="footer">AgentEval · Local, self-contained report · 1 = PASS / 0 = N/A / −1 = FAIL / null = ERROR<br>
+Reports include the supplied trace content. Review before sharing.<div class="hash">Configuration SHA-256: a002e0a4643a02d8f6a6acfb894058b237d2ca93178cd4cf704b03167babae9b</div></div></main></body></html>

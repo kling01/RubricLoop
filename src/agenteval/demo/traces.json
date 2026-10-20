@@ -1,0 +1,85 @@
+[
+  {
+    "id": "demo-supported-lookup",
+    "root": {
+      "name": "LangGraph",
+      "type": "CHAIN",
+      "input": {
+        "messages": [
+          {
+            "type": "human",
+            "content": "What is the status of order A-104?"
+          }
+        ]
+      },
+      "output": {
+        "messages": [
+          {
+            "type": "ai",
+            "content": "Order A-104 has shipped. The lookup result confirms the status."
+          }
+        ]
+      },
+      "steps": [
+        {
+          "type": "TOOL",
+          "name": "lookup",
+          "input": {
+            "identifier": "A-104"
+          },
+          "output": {
+            "status": "shipped"
+          },
+          "steps": []
+        }
+      ]
+    }
+  },
+  {
+    "id": "demo-missing-final-answer",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Please summarize the result."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": "demo-lookup-without-id",
+    "root": {
+      "name": "LangGraph",
+      "type": "CHAIN",
+      "input": {
+        "messages": [
+          {
+            "type": "human",
+            "content": "Check my order status."
+          }
+        ]
+      },
+      "output": {
+        "messages": [
+          {
+            "type": "ai",
+            "content": "Please provide your order identifier so I can check its status."
+          }
+        ]
+      },
+      "steps": [
+        {
+          "type": "TOOL",
+          "name": "lookup",
+          "input": {},
+          "output": {
+            "error": "missing identifier"
+          },
+          "steps": []
+        }
+      ]
+    }
+  }
+]

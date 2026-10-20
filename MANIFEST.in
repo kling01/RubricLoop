@@ -1,0 +1,3 @@
+include README.zh-CN.md
+recursive-include docs *.md *.svg *.png *.html *.json
+recursive-include examples *.json *.yaml

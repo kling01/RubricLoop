@@ -1,0 +1,101 @@
+{
+  "source_repository": "https://github.com/kling01/human-value-allocation",
+  "source_commit": "0bbbd074c5c4eada8f4530ddde060ee3b5b6c1be",
+  "files": [
+    {
+      "path": "__init__.py",
+      "source_sha256": "5698e0cd450241e3418737b444ef18b49a23cf84de44494bdf26c04a817c9ac5",
+      "release_sha256": "5698e0cd450241e3418737b444ef18b49a23cf84de44494bdf26c04a817c9ac5"
+    },
+    {
+      "path": "config/common/llm_evals.yaml",
+      "source_sha256": "136e50cdae7d0d1f2dfdc7a6007ac5811f20edaba5220541e9c64540cc3e5a78",
+      "release_sha256": "136e50cdae7d0d1f2dfdc7a6007ac5811f20edaba5220541e9c64540cc3e5a78"
+    },
+    {
+      "path": "config/common/rules.yaml",
+      "source_sha256": "e805376cb5af0acd5efe0c95b9855f859483069067744109b465ef89f6eaa547",
+      "release_sha256": "e805376cb5af0acd5efe0c95b9855f859483069067744109b465ef89f6eaa547"
+    },
+    {
+      "path": "core/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "core/cleaner.py",
+      "source_sha256": "3dfb3e2d245e422a660ee62b9173988dc377ece6d3c119a6aa31670e62931656",
+      "release_sha256": "3dfb3e2d245e422a660ee62b9173988dc377ece6d3c119a6aa31670e62931656"
+    },
+    {
+      "path": "core/evaluator_spec.py",
+      "source_sha256": "bbe98a745a929a80ec51a0ec6daaa9676df2e00784344cd4f133544493dfa10e",
+      "release_sha256": "bbe98a745a929a80ec51a0ec6daaa9676df2e00784344cd4f133544493dfa10e"
+    },
+    {
+      "path": "core/feature_registry.py",
+      "source_sha256": "ebd8a88a589afc2a89e458efe8bed8aae6e16ff6bb8221be39f5bcff8f186cac",
+      "release_sha256": "3a8556c6dd3c30ecc4517f02a2d3b7f93c2e8d2c560d85f2dbcbbe0d65685376"
+    },
+    {
+      "path": "core/features.py",
+      "source_sha256": "3e704646463db5cf1768a71922b076e73c223b369fb9e213c70ce3d4e1c5461f",
+      "release_sha256": "3e704646463db5cf1768a71922b076e73c223b369fb9e213c70ce3d4e1c5461f"
+    },
+    {
+      "path": "core/meta.py",
+      "source_sha256": "dbd1852b3b2ddedc64636fc30b89ecdc4bf17b588807250535f9f7188d15c91f",
+      "release_sha256": "dbd1852b3b2ddedc64636fc30b89ecdc4bf17b588807250535f9f7188d15c91f"
+    },
+    {
+      "path": "core/pipeline.py",
+      "source_sha256": "b439b9df85eb600c9b5a48a7a201511941501d2560ca8f8d8d6665f5da736465",
+      "release_sha256": "9ba7af4316dd09fde0ad5d044bc48308bdbeb29da945fa7d05ef22b25a4ac60c"
+    },
+    {
+      "path": "core/rules.py",
+      "source_sha256": "b2f1adacd995819a2bc5784560dd1b9afc591fbf517dbee0cace5ae93a6c692d",
+      "release_sha256": "123dde7b222afed4d896201e17a40ab09aa160f394faa7e92e256afcc8b91fb5"
+    },
+    {
+      "path": "core/trace_nav.py",
+      "source_sha256": "417865931096fb869614edd087db0f310d394fe12587de6f93fa2b72408e0f69",
+      "release_sha256": "417865931096fb869614edd087db0f310d394fe12587de6f93fa2b72408e0f69"
+    },
+    {
+      "path": "evaluate.py",
+      "source_sha256": "90c759825046053a83cca2c98aa6a6ccc7a38aa54c156c4e3fbb98b04ba14c8f",
+      "release_sha256": "b108a67c92f36d78288143605edfb52bab6768e56c9c88b8105c2da68ee48a5d"
+    },
+    {
+      "path": "llm/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "llm/client.py",
+      "source_sha256": "dbe2ca4a3618402da7b88535d5a964a4fedd677964c4fa288c1f59873f339244",
+      "release_sha256": "1d6222cda127625cfd67953ac802f9aca46e181985d3e9aea4e953424c5dc08c"
+    },
+    {
+      "path": "llm/eval.py",
+      "source_sha256": "b9e1ae52bdc4e1753d4ce68a03aa78c87a81241e09c2a787f258ee72b37f3b7d",
+      "release_sha256": "e40bb28c9286414290dc448dbb0f9a3e7f3c76315317d7fa08a37fc28a48d980"
+    },
+    {
+      "path": "llm/runtime.py",
+      "source_sha256": "1f5b3d1fd198a5c07a67db2f56ae86ab680a0af7ee876265322e3a7425016a4b",
+      "release_sha256": "1f5b3d1fd198a5c07a67db2f56ae86ab680a0af7ee876265322e3a7425016a4b"
+    },
+    {
+      "path": "report.py",
+      "source_sha256": "db9271d294d3282137a700245b34bef85ea8fdf0af2d20bcdbdaedeabbb7ae34",
+      "release_sha256": "1574d42a75c8a3a881534b8f4e108ea92bc035c79b7bcf30dbec2306367f010d"
+    },
+    {
+      "path": "report_html.py",
+      "source_sha256": "2c1f196d557c5b6056b776bfb76fb33b9a0b6782115d1970de79a7c618387521",
+      "release_sha256": "8a186d3b38e3c0807453a2aea2ae1afa318ce5fc6f4d8b70d58baf19cc2f3728"
+    }
+  ]
+}

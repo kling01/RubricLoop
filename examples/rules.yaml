@@ -1,0 +1,21 @@
+# Trusted Python expressions. True means the rule was violated.
+threshold: 60
+rules:
+  - id: response-present
+    name: Final response is present
+    description: The agent must return a non-empty final response.
+    scope: trace
+    check: "not has_final_output"
+    weight: 100
+  - id: concise-response
+    name: Response stays within the demo length limit
+    description: The final response must contain at most 160 characters.
+    scope: trace
+    check: "len(final_content) > 160"
+    weight: 40
+  - id: lookup-identifier
+    name: Lookup includes an identifier
+    description: When lookup is called, each call must provide an identifier.
+    scope: tool:lookup
+    check: "any(not call['input'].get('identifier') for call in lookup_calls)"
+    weight: 100

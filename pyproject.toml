@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agenteval-traces"
+version = "0.1.0a1"
+description = "Turn agent traces into inspectable evaluation evidence."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "kling01"}]
+dependencies = ["httpx>=0.27,<1", "PyYAML>=6,<7"]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1,<2"]
+
+[project.scripts]
+agenteval = "agenteval.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kling01/agenteval"
+Issues = "https://github.com/kling01/agenteval/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agenteval = ["demo/*.json", "demo/*.yaml", "engine/config/common/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
