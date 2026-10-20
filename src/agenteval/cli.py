@@ -11,7 +11,7 @@ from .render import render_html
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(prog="agenteval", description="Trace → executable checks → inspectable evidence")
+    parser = argparse.ArgumentParser(prog="rubricloop", description="Trace → executable checks → inspectable evidence")
     subs = parser.add_subparsers(dest="command", required=True)
     demo = subs.add_parser("demo", help="Run authored examples locally; no API key or model needed")
     demo.add_argument("--out", type=Path, default=Path("runs/demo"))
@@ -32,8 +32,10 @@ def main(argv=None):
                 rules_yaml=data.joinpath("rules.yaml").read_text(encoding="utf-8")))
             result["demo"] = True
         else:
-            options = {"api_key": os.environ.get("AGENTEVAL_API_KEY", ""),
-                "base_url": os.environ.get("AGENTEVAL_BASE_URL", ""), "model": os.environ.get("AGENTEVAL_MODEL", "")}
+            options = {
+                key: os.environ.get(f"RUBRICLOOP_{suffix}", os.environ.get(f"AGENTEVAL_{suffix}", ""))
+                for key, suffix in (("api_key", "API_KEY"), ("base_url", "BASE_URL"), ("model", "MODEL"))
+            }
             result = asyncio.run(evaluate(json.loads(args.input.read_text(encoding="utf-8")),
                 rules_yaml=args.rules.read_text(encoding="utf-8") if args.rules else "",
                 evaluators_yaml=args.evaluators.read_text(encoding="utf-8") if args.evaluators else "",
@@ -46,7 +48,7 @@ def main(argv=None):
         return 2 if result["summary"]["error"] else 0
     except (ValueError, OSError) as exc:
         # Input errors are useful; provider exception text never reaches reports.
-        print(f"AgentEval: {exc}", file=sys.stderr)
+        print(f"RubricLoop: {exc}", file=sys.stderr)
         return 1
 
 

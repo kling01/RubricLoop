@@ -88,7 +88,7 @@ async def evaluate(traces, *, rules_yaml="", evaluators_yaml="", model_options=N
     opts = dict(model_options or {})
     uses_model = any(e.get("prompt") for e in evaluators)
     if uses_model and (not opts.get("base_url") or not opts.get("model")):
-        raise ValueError("LLM evaluation needs AGENTEVAL_BASE_URL and AGENTEVAL_MODEL (or model_options).")
+        raise ValueError("LLM evaluation needs RUBRICLOOP_BASE_URL and RUBRICLOOP_MODEL (or model_options).")
     result = await run_combined(traces, PipelineConfig(
         rules_yaml=rules_yaml, llm_yaml=evaluators_yaml, enable_llm=uses_model,
         llm_options=opts if uses_model else {}, concurrency=concurrency, n_runs=n_runs,

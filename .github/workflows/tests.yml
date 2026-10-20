@@ -15,5 +15,5 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: pip install -e '.[dev]'
       - run: pytest -q
-      - run: agenteval demo --out /tmp/agenteval-demo
+      - run: rubricloop demo --out /tmp/rubricloop-demo
       - run: python -m build

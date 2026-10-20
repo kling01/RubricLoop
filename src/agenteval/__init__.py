@@ -1,5 +1,5 @@
-"""Public AgentEval interface. See docs/usage.md for the trace contract."""
+"""Public RubricLoop interface; the original import namespace is retained."""
 from .api import evaluate
 
-__version__ = "0.1.0a1"
+__version__ = "0.1.0a2"
 __all__ = ["evaluate"]

@@ -1,6 +1,6 @@
-# AgentEval roadmap
+# RubricLoop roadmap
 
-AgentEval is the evaluation layer of a broader data-quality workflow: turn traces into explicit assessments, expose the evidence for review, and make later revisions measurable.
+RubricLoop is the evaluation layer of a broader data-quality workflow: turn traces into explicit assessments, expose the evidence for review, and make later revisions measurable.
 
 The table below separates the runnable release from development directions. These directions are not delivery-date commitments.
 
@@ -41,4 +41,4 @@ No accuracy, cost-reduction, or intervention-value benchmark is claimed by the i
 
 [Human Value Allocation](https://github.com/kling01/human-value-allocation) is an independent tool and research project for analyzing visible human contributions. Its related [paper](https://arxiv.org/abs/2610.26365) informs the longer-term work on human participation.
 
-AgentEval evaluates agent behavior against criteria. Using that component in a system that predicts when human intervention is worthwhile is a future integration and research task.
+RubricLoop evaluates agent behavior against criteria. Using that component in a system that predicts when human intervention is worthwhile is a future integration and research task.

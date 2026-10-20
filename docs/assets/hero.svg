@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
-  <title id="title">AgentEval</title>
-  <desc id="desc">Make agent behavior inspectable. Trace to executable rubric to evidence and review.</desc>
+  <title id="title">RubricLoop</title>
+  <desc id="desc">Rubric-driven evaluation for AI agents. Trace to executable rubric to evidence and review.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0B1124"/>
@@ -20,11 +20,11 @@
   <rect x="52" y="44" width="6" height="18" rx="3" fill="#89B8FF"/>
   <text x="71" y="59" fill="#A9B9D9" font-size="15" font-weight="600" letter-spacing="3" font-family="Arial, Helvetica, sans-serif">OPEN EVALUATION TOOLING</text>
   <g transform="translate(52 91)" stroke="url(#accent)" stroke-width="3.5" fill="none" stroke-linejoin="round">
-    <path d="M0 48L25 0H43L68 48M13 25H55"/>
-    <path d="M80 0H113M80 24H106M80 48H113M80 0V48"/>
+    <path d="M0 48V0H27C41 0 48 5 48 14S41 28 27 28H0M26 28L51 48"/>
+    <path d="M76 0V48H113"/>
   </g>
-  <text x="187" y="146" fill="#F1F5FF" font-size="72" font-weight="700" letter-spacing="-3" font-family="Arial, Helvetica, sans-serif">AgentEval</text>
-  <text x="54" y="191" fill="#B8C8E5" font-size="25" font-family="Arial, Helvetica, sans-serif">Make agent behavior inspectable.</text>
+  <text x="187" y="146" fill="#F1F5FF" font-size="72" font-weight="700" letter-spacing="-3" font-family="Arial, Helvetica, sans-serif">RubricLoop</text>
+  <text x="54" y="191" fill="#B8C8E5" font-size="25" font-family="Arial, Helvetica, sans-serif">Rubric-driven evaluation for AI agents.</text>
   <text x="1139" y="58" text-anchor="end" fill="#A9B9D9" font-size="14" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">CODE · MODEL · HYBRID</text>
   <g font-family="Arial, Helvetica, sans-serif">
     <rect x="52" y="236" width="316" height="132" rx="14" fill="url(#card)" stroke="#344260"/>
@@ -46,5 +46,5 @@
   </g>
   <circle cx="59" cy="412" r="4" fill="#7DD4C4"/>
   <text x="73" y="417" fill="#A9B9D9" font-size="16" font-family="Arial, Helvetica, sans-serif">Start offline. Bring your traces. Inspect every criterion.</text>
-  <text x="1148" y="417" text-anchor="end" fill="#879ABF" font-size="15" font-family="Arial, Helvetica, sans-serif">github.com/kling01/agenteval</text>
+  <text x="1148" y="417" text-anchor="end" fill="#879ABF" font-size="15" font-family="Arial, Helvetica, sans-serif">github.com/kling01/RubricLoop</text>
 </svg>

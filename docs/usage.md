@@ -1,6 +1,6 @@
-# Using AgentEval
+# Using RubricLoop
 
-AgentEval evaluates traces using locally executed code rules and optionally a configured model judge. Begin with the offline demo, then substitute your own traces and criteria.
+RubricLoop evaluates traces using locally executed code rules and optionally a configured model judge. Begin with the offline demo, then substitute your own traces and criteria.
 
 ## 1. Install and run the demo
 
@@ -10,7 +10,7 @@ From the repository root, with Python 3.10 or newer:
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
-agenteval demo --out runs/demo
+rubricloop demo --out runs/demo
 ```
 
 On Windows, activate the environment with `.venv\Scripts\activate`.
@@ -18,6 +18,25 @@ On Windows, activate the environment with `.venv\Scripts\activate`.
 The demo uses three hand-authored conversations. It executes code checks without network access to a model provider. Open `runs/demo/report.html` in a browser and inspect `runs/demo/results.json` for machine-readable results.
 
 Choose a new `--out` directory for each run. The CLI refuses to overwrite an existing output directory, preserving earlier results for comparison.
+
+### Migration from AgentEval
+
+Version `0.1.0a2` adopts the RubricLoop project name. Use the `rubricloop` command and the `RUBRICLOOP_BASE_URL`, `RUBRICLOOP_MODEL`, and `RUBRICLOOP_API_KEY` environment variables for new setups.
+
+The `agenteval` command and the corresponding `AGENTEVAL_BASE_URL`, `AGENTEVAL_MODEL`, and `AGENTEVAL_API_KEY` variables remain supported for compatibility. Python imports and the source namespace remain `agenteval`, including `from agenteval import evaluate`.
+
+When both environment-variable families are set, `RUBRICLOOP_*` takes precedence. If you installed the previous `agenteval-traces` distribution, remove it before installing the updated checkout; both distributions use the same Python namespace:
+
+```bash
+python -m pip uninstall agenteval-traces
+python -m pip install -e .
+```
+
+The repository is now [kling01/RubricLoop](https://github.com/kling01/RubricLoop), and the online report is at [kling01.github.io/RubricLoop/demo.html](https://kling01.github.io/RubricLoop/demo.html). Existing checkouts can update their remote:
+
+```bash
+git remote set-url origin https://github.com/kling01/RubricLoop.git
+```
 
 ## 2. Supply traces
 
@@ -64,7 +83,7 @@ When `not has_final_output` is `True`, the rule produces `-1` (fail). When it is
 Run a rule file:
 
 ```bash
-agenteval run examples/traces.json \
+rubricloop run examples/traces.json \
   --rules examples/rules.yaml \
   --out runs/rules
 ```
@@ -86,9 +105,9 @@ The inherited engine also has weighted-score fields for compatibility with evalu
 Configure an OpenAI-compatible chat endpoint:
 
 ```bash
-export AGENTEVAL_BASE_URL="https://your-provider.example/v1"
-export AGENTEVAL_MODEL="your-model"
-export AGENTEVAL_API_KEY="your-api-key"
+export RUBRICLOOP_BASE_URL="https://your-provider.example/v1"
+export RUBRICLOOP_MODEL="your-model"
+export RUBRICLOOP_API_KEY="your-api-key"
 ```
 
 Replace the example values with your provider's settings. Keep credentials out of committed files.
@@ -96,7 +115,7 @@ Replace the example values with your provider's settings. Keep credentials out o
 Start from [`examples/judge.yaml`](../examples/judge.yaml):
 
 ```bash
-agenteval run examples/traces.json \
+rubricloop run examples/traces.json \
   --evaluators examples/judge.yaml \
   --concurrency 4 \
   --n-runs 1 \
@@ -106,7 +125,7 @@ agenteval run examples/traces.json \
 Use `--rules` and `--evaluators` together when the evaluator should consume rule results:
 
 ```bash
-agenteval run examples/traces.json \
+rubricloop run examples/traces.json \
   --rules examples/rules.yaml \
   --evaluators examples/hybrid.yaml \
   --concurrency 4 \
