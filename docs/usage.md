@@ -171,9 +171,9 @@ The engine includes a structured evaluator specification with evaluator IDs, ver
 
 This structure makes criteria explicit and supports controlled clause edits. The public CLI currently focuses on trace-level evaluation. Automatic proposal of repairs, regression acceptance, and deployment of revised evaluators are future workflow components.
 
-## What the demo establishes
+## Offline demo
 
-A successful offline demo establishes that installation, trace normalization, code-rule execution, and report generation work together on the shipped examples. It does not establish general model-judge accuracy, production reliability, or the effectiveness of an automatic revision algorithm.
+The offline demo walks through installation, trace normalization, code-rule execution, and report generation using the shipped examples.
 
 For your domain, keep a separate human-reviewed evaluation set and inspect error types before expanding the workload.
 

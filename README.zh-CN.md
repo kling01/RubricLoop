@@ -33,7 +33,7 @@ RubricLoop 是**「人在回路」**旗下的开源评测项目。我们从数�
 | **标准版本化** | 引擎支持带条款 ID 和版本的结构化评估器定义。 |
 | **结果复核** | 在 HTML 中查看轨迹、规则结果与模型判断，通过 JSON 接入后续分析。 |
 
-离线演示包含三条人工编写的小型示例轨迹，并实际执行代码规则。它用于检查安装和体验流程，不代表评估器准确率或 benchmark 成绩。
+通过三条人工编写的示例轨迹体验评测流程：在本地执行代码规则，查看每项结果，打开生成的报告。
 
 <p align="center">
   <img src="docs/assets/rubricloop-demo-hidpi-v2.png" width="100%" alt="RubricLoop 真实离线报告：3 条人工编写的示例轨迹，9 项检查，6 项通过、2 项不通过、1 项不适用。" />
@@ -129,7 +129,7 @@ rubricloop run examples/traces.json \
 
 **代码规则的 `check` 表达的是违规条件：** 返回 `True` 时判为不通过。规则在本机执行 Python 表达式，不是沙箱；请使用自己信任、检查过的规则文件。
 
-报告分别统计通过、不通过、不适用与出错的数量。模型评估器的判断需要通过人工复核样本校准。
+报告分别统计通过、不通过、不适用与出错的数量。
 
 ## 当前版本范围
 
@@ -141,7 +141,7 @@ rubricloop run examples/traces.json \
 
 [**Human Value Allocation**](https://github.com/kling01/human-value-allocation) 是独立项目，用于分析人机对话中可观察的人类贡献。
 
-其关联论文 [*From Tasks to Turns: Measuring Human Labor Contributions in Human–Agent Joint Production*](https://arxiv.org/abs/2610.26365) 为人类参与研究提供基础。RubricLoop 提供通用评测组件，本仓库不声称已复现该论文的实验。
+关联论文 [*From Tasks to Turns: Measuring Human Labor Contributions in Human–Agent Joint Production*](https://arxiv.org/abs/2610.26365) 介绍人类参与的相关研究。RubricLoop 提供可复用的 Agent 评测组件。
 
 ## 参与贡献
 

@@ -2,7 +2,7 @@
 
 RubricLoop is the evaluation layer of a broader data-quality workflow: turn traces into explicit assessments, expose the evidence for review, and make later revisions measurable.
 
-The table below separates the runnable release from development directions. These directions are not delivery-date commitments.
+The table below shows available capabilities and planned extensions.
 
 | Area | Status | Scope |
 | --- | --- | --- |
@@ -29,13 +29,11 @@ The immediate extension is a small, inspectable evaluator-improvement loop:
 4. The candidate is compared with the previous version on held-out cases.
 5. A reviewer inspects improvements and regressions before accepting it.
 
-The existing versioned-clause implementation is one building block. A complete automatic repair and regression-acceptance workflow still requires implementation and validation.
+Build on the versioned-clause API to add feedback capture, candidate generation, and regression acceptance.
 
-## Evidence for future claims
+## Evaluation plan
 
 Useful progress measures include agreement with reviewed labels, errors by criterion, regression rates after revision, and the time and model cost required to obtain accepted results. Those measurements should identify the evaluation set, model configuration, and evaluator version.
-
-No accuracy, cost-reduction, or intervention-value benchmark is claimed by the initial release.
 
 ## Relationship to Human Value Allocation
 

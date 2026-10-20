@@ -17,5 +17,4 @@ from successful evaluations. Raw provider exception messages are not exported.
 engine file. This new repository contains a clean source snapshot, not the history,
 credentials or business datasets of earlier development workspaces.
 
-The example traces were written to exercise the interface. They are not customer
-conversations, benchmark samples or model-quality measurements.
+The example traces are hand-authored fixtures for exercising the interface.

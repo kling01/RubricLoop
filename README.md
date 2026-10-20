@@ -33,7 +33,7 @@ RubricLoop is an open-source evaluation project from **人在回路**. The start
 | **Versioned criteria** | Define identified rubric clauses and evaluator versions with the engine's structured specification. |
 | **Reviewable results** | Inspect traces, rule outcomes, and model judgments in HTML; use JSON for downstream analysis. |
 
-The offline demo uses three small, hand-authored traces and executes real code rules. It is an installation and workflow example; it does not measure judge accuracy or performance on a benchmark.
+Try the evaluation workflow with three hand-authored traces: run code rules locally, inspect each result, and open the generated report.
 
 <p align="center">
   <img src="docs/assets/rubricloop-demo-hidpi-v2.png" width="100%" alt="Actual RubricLoop offline report: three authored traces, nine checks, six passes, two failures, and one non-applicable result." />
@@ -129,7 +129,7 @@ Each criterion retains its own outcome:
 
 **A code rule's `check` describes a violation:** `True` produces a fail. Rules are trusted Python expressions, executed locally; they are not sandboxed. Review rule files before running them.
 
-The report counts passes, failures, non-applicable results, and errors separately. A model's judgment remains an assessment to validate against human-reviewed examples.
+The report counts passes, failures, non-applicable results, and errors separately.
 
 ## Release scope
 
@@ -141,7 +141,7 @@ The next steps are evaluator feedback and revision, regression checks, and integ
 
 [**Human Value Allocation**](https://github.com/kling01/human-value-allocation) is a separate project for inspecting visible human contributions in human–agent conversations.
 
-Its related paper, [*From Tasks to Turns: Measuring Human Labor Contributions in Human–Agent Joint Production*](https://arxiv.org/abs/2610.26365), motivates research on human participation. RubricLoop is the generic evaluation component; this repository does not claim to reproduce that paper's experiments.
+Read the related paper, [*From Tasks to Turns: Measuring Human Labor Contributions in Human–Agent Joint Production*](https://arxiv.org/abs/2610.26365), for the research on human participation. RubricLoop provides the reusable agent-evaluation component.
 
 ## Contributing
 
